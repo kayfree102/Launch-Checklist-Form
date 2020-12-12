@@ -43,7 +43,7 @@ window.addEventListener("load", function () {
       } else if (isNaN(cargoInput.value) == true) {
          alert("Please enter number for cargo.")
          event.preventDefault();
-      } else if (!isNaN(pilotInput.value)|| !isNaN(copilotInput.value)) {
+      } else if (!isNaN(pilotInput.value)|| !isNaN(copilotInput.value)){
          alert("The names of the pilot and copilot must use the alphabet.")
          event.preventDefault();
       } else {
