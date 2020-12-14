@@ -36,16 +36,22 @@ window.addEventListener("load", function () {
 
       if (pilotInput.value === "" || copilotInput.value === "" || fuelInput.value === "" || cargoInput.value === "") {
          alert("All fields are required!");
-         event.preventDefault();
       } else if (isNaN(fuelInput.value) == true) {
          alert("Please enter number for fuel.")
          event.preventDefault();
       } else if (isNaN(cargoInput.value) == true) {
          alert("Please enter number for cargo.")
          event.preventDefault();
-      } else if (!isNaN(pilotInput.value)|| !isNaN(copilotInput.value)){
+
+       } else if (!isNaN(pilotInput.value)) {
          alert("The names of the pilot and copilot must use the alphabet.")
          event.preventDefault();
+      
+       } else if (!isNaN(copilotInput.value)) {
+
+            alert("The names of the pilot and copilot must use the alphabet.")
+            event.preventDefault();
+   
       } else {
          if (fuelInput.value < 10000) {
             faultList.style.visibility = "visible";
